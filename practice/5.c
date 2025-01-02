@@ -49,8 +49,8 @@ int main(){
     printf("Enter the expression: ");
     scanf("%s", exp); 
     
-    e = exp; 
-    while(*e != '\0'){
+    
+    for(e=exp;*e!='\0';e++){
         if(isdigit(*e)){
             num = *e -48;
             push(num); 
@@ -77,11 +77,9 @@ int main(){
 
             push(n3); 
         }
-        e++;
+        
     }
 
     printf("\nThe value of expression %s is: %d\n", exp,pop());
     return 0; 
 }
-
-
