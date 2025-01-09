@@ -51,7 +51,7 @@ void insert(char *name){
 void delete(char *name){
     Node *temp = head, *prev = NULL;
 
-    if(strcmp(temp->name, name) == 0){
+    if(temp && strcmp(temp->name, name) == 0){
         head = head->next; 
         free(temp);
         return; 
