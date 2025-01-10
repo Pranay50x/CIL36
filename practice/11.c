@@ -54,7 +54,7 @@ void insert(int data, int key){
     current->prev = newNode; 
     newNode->next = current;
 
-    if(newNode->prev != NULL)
+    if(newNode->prev)
         newNode->prev->next = newNode;
     else
         head=newNode;
@@ -65,7 +65,7 @@ void delete(int data){
     Node *temp = head;
     Node *prev, *next = NULL;
 
-    while(temp!=NULL && temp->data != data){
+    while(temp && temp->data != data){
         prev=temp;
         temp=temp->next; 
     }
@@ -121,7 +121,7 @@ int main(){
             case 1:
                 printf("Enter value to insert: ");
                 scanf("%d",&val);
-                if(head!=NULL){
+                if(head){
                     printf("Enter value of key: ");
                     scanf("%d",&key);
                 }
