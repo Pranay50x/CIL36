@@ -63,7 +63,7 @@ void insert(int data, int key){
 void delete(int data){
 
     Node *temp = head;
-    Node *prev, *next = NULL;
+    Node *prev=NULL, *next = NULL;
 
     while(temp && temp->data != data){
         prev=temp;
