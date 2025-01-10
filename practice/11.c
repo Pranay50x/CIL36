@@ -41,7 +41,7 @@ void insert(int data, int key){
     }
 
     Node *current = head;
-    while(current != NULL && current->data !=key)
+    while(current && current->data !=key)
         current = current->next;
 
     if(!current){
